@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Devloper Support</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<link rel="stylesheet" href="intro.css">
+</head>
+<style>
+  /* money  */
+
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial;
+  overflow: hidden;
+  color: white;
+  background: #0b0b14;
+}
+
+/* 🌙 CLEAN ANIME NIGHT BACKGROUND */
+.bg {
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255, 78, 216, 0.25), transparent 40%),
+    radial-gradient(circle at 80% 30%, rgba(79, 209, 255, 0.25), transparent 40%),
+    radial-gradient(circle at 50% 80%, rgba(124, 77, 255, 0.25), transparent 40%);
+  animation: float 12s ease-in-out infinite;
+  z-index: -1;
+}
+
+@keyframes float {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+/* CARD */
+.card {
+  width: 340px;
+  padding: 25px;
+  border-radius: 18px;
+  text-align: center;
+  background: rgba(20, 20, 35, 0.75);
+  box-shadow: 0 0 25px rgba(255, 79, 216, 0.3),
+              0 0 35px rgba(79, 209, 255, 0.2);
+  backdrop-filter: blur(10px);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+h1 {
+  margin: 0;
+  color: #ff4fd8;
+  text-shadow: 0 0 8px rgba(255, 79, 216, 0.6);
+}
+
+label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+input {
+  transform: scale(1.3);
+  accent-color: #ff4fd8;
+}
+
+/* QR CENTER */
+#qr {
+  width: 180px;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+</style>
+<body>
+
+<div class="bg"></div>
+
+<div class="card">
+
+  <h1>🎮 Support Dveloper</h1>
+
+  <p>"If you enjoyed this game and had a great experience playing it, your support would mean the world to us ❤️
+Every contribution helps us improve the game, add new features, and create even more exciting updates for you.
+If you believe in this project and want to see it grow bigger and better, please consider supporting us."</p>
+<p>Your small support can make a big difference for the future of this game 🎮✨</p>
+  <label>
+    <input type="checkbox" id="agree">
+    I agree to support
+  </label>
+
+  <div id="qr"></div>
+
+</div>
+
+<script>
+const qrBox = document.getElementById("qr");
+
+document.getElementById("agree").addEventListener("change", function () {
+  qrBox.innerHTML = "";
+
+  if (this.checked) {
+    new QRCode(qrBox, {
+      text: "upi://pay?pa=darshanchauhan930@okaxis&pn=Darshan Chauhan&cu=INR",
+      width: 180,
+      height: 180
+    });
+  }
+});
+</script>
+
+</body>
+</html>
