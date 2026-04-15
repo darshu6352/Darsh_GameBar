@@ -1,0 +1,77 @@
+body {
+    text-align: center;
+    overflow: hidden;
+}
+body {
+    background: linear-gradient(to right, #d3cce3, #e9e4f0);
+}
+#board {
+    background-color: black;
+}
+#board {
+    max-width: 100%;
+    height: auto;
+}
+/* BODY FIX */
+body {
+  margin: 0;
+  overflow: hidden;
+  background: linear-gradient(to right, #d3cce3, #e9e4f0);
+
+  /* 🔥 CENTER FIX */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* BOARD */
+#board {
+  background-color: black;
+
+  /* responsive */
+  width: 90vmin;
+  height: 90vmin;
+
+  max-width: 400px;
+  max-height: 400px;
+}
+/* ===== COOL SINGLE COLOR BACKGROUND ===== */
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+
+    /* Soft calming blue */
+    background: #0f2027;
+
+    /* Smooth breathing animation */
+    animation: calmBG 8s ease-in-out infinite;
+}
+
+/* Soft brightness animation */
+@keyframes calmBG {
+    0%   { background-color: #0f2027; }
+    50%  { background-color: #203a43; }
+    100% { background-color: #0f2027; }
+}
+
+/* ===== SOFT GLOW EFFECT ===== */
+body::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+    background: radial-gradient(circle at center, rgba(255,255,255,0.08), transparent 70%);
+}
+
+/* ===== GAME BOX (OPTIONAL) ===== */
+#gameBox {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,255,255,0.3);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: white;
+}   
+
