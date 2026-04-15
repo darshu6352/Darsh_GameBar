@@ -1,0 +1,56 @@
+body {
+    text-align: center;
+}
+
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+}
+#board {
+    background-color: black;
+    border-top: 5px solid skyblue;
+    border-left: 5px solid skyblue;
+    border-right: 5px solid skyblue;
+}
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  text-align: center;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
+
+  display: flex;              /* 🔥 center fix */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* BOARD */
+#board {
+  background-color: black;
+  border-top: 5px solid skyblue;
+  border-left: 5px solid skyblue;
+  border-right: 5px solid skyblue;
+
+  /* 🔥 responsive size */
+  width: 90vmin;
+  height: 90vmin;
+
+  max-width: 400px;
+  max-height: 400px;
+}
+
+/* 📱 MOBILE */
+@media (max-width: 400px) {
+  #board {
+    width: 95vmin;
+    height: 95vmin;
+  }
+}
