@@ -145,5 +145,32 @@ window.addEventListener('keydown', e =>{
         default:
             break;
     }
+/* ****************************** */
+/* joystic  for mobile responsive*/
+/* ****************************** */
+
+document.getElementById("up").addEventListener("click", () => {
+    inputDir.x = 0;
+    inputDir.y = -1;
+    moveSound.play();
+});
+
+document.getElementById("down").addEventListener("click", () => {
+    inputDir.x = 0;
+    inputDir.y = 1;
+    moveSound.play();
+});
+
+document.getElementById("left").addEventListener("click", () => {
+    inputDir.x = -1;
+    inputDir.y = 0;
+    moveSound.play();
+});
+
+document.getElementById("right").addEventListener("click", () => {
+    inputDir.x = 1;
+    inputDir.y = 0;
+    moveSound.play();
+});
 
 });
