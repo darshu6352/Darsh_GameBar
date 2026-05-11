@@ -60,3 +60,91 @@
     border: .25vmin solid black;
     border-radius: 8px;
 }
+
+
+
+/* ****************************** */
+/* joystic  for mobile responsive*/
+/* ****************************** */
+    
+.joyst{
+    display:grid;
+    grid-template-columns:70px 70px 70px;
+    grid-template-rows:70px 70px 70px;
+    gap:10px;
+}
+.joyst{
+    position:fixed;
+    bottom:20px;
+    left:60px;
+
+    display:grid;
+    grid-template-columns:70px 70px 70px;
+    grid-template-rows:70px 70px 70px;
+    gap:10px;
+
+    z-index:1000;
+}
+
+/* Buttons */
+.btn{
+    background:#333;
+    color:white;
+    font-size:30px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:15px;
+    user-select:none;
+}
+
+/* Positions */
+#up{
+    grid-column:2;
+    grid-row:1;
+}
+
+#left{
+    grid-column:1;
+    grid-row:2;
+}
+
+#right{
+    grid-column:3;
+    grid-row:2;
+}
+
+#down{
+    grid-column:2;
+    grid-row:3;
+}
+
+/* Button Style */
+.btn{
+    background:#333;
+    color:white;
+    font-size:30px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:15px;
+    user-select:none;
+
+    transition:0.1s;
+}
+
+/* Click Animation */
+.btn:active{
+    transform:scale(0.85);
+    background:#666;
+}
+/* Hide on PC */
+@media (min-width:769px){
+    .joyst{
+        display:none;
+    }
+}    
