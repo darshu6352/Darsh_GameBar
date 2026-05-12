@@ -175,4 +175,6 @@ document.getElementById("right").addEventListener("click", () => {
     moveSound.play();
 });
 
+});
+
 
