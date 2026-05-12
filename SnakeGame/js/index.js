@@ -145,6 +145,7 @@ window.addEventListener('keydown', e =>{
         default:
             break;
     }
+});
 /* ****************************** */
 /* joystic  for mobile responsive*/
 /* ****************************** */
@@ -173,4 +174,4 @@ document.getElementById("right").addEventListener("click", () => {
     moveSound.play();
 });
 
-});
+
