@@ -231,4 +231,43 @@ function resetGame() {
 }
 
 
-// =================
+
+/* ******************************** */
+/* *************joystic************ */
+/* ******************************** */
+function setupControls() {
+    const leftBtn = document.getElementById("left");
+    const rightBtn = document.getElementById("right");
+
+    if (!leftBtn || !rightBtn) return;
+
+    leftBtn.addEventListener("click", () => {
+        let nextplayerX = player.x - player.velocityX;
+        if (!outOfBounds(nextplayerX)) {
+            player.x = nextplayerX;
+        }
+    });
+
+    rightBtn.addEventListener("click", () => {
+        let nextplayerX = player.x + player.velocityX;
+        if (!outOfBounds(nextplayerX)) {
+            player.x = nextplayerX;
+        }
+    });
+}
+window.onload = function() {
+    board = document.getElementById("board");
+    board.height = boardHeight;
+    board.width = boardWidth;
+    context = board.getContext("2d");
+
+    context.fillStyle="skyblue";
+    context.fillRect(player.x, player.y, player.width, player.height);
+
+    requestAnimationFrame(update);
+    document.addEventListener("keydown", movePlayer);
+
+    createBlocks();
+
+    setupControls();
+}
