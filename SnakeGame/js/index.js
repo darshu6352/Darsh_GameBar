@@ -145,7 +145,8 @@ window.addEventListener('keydown', e =>{
         default:
             break;
     }
-});
+   });
+
 /* ****************************** */
 /* joystic  for mobile responsive*/
 /* ****************************** */
