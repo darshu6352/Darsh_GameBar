@@ -54,3 +54,53 @@ body {
     height: 95vmin;
   }
 }
+
+
+/* ******************************** */
+/* *************joystic************ */
+/* ******************************** */
+
+.joyst {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .joyst {
+        position: fixed;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        display: flex;
+        gap: 20px;
+        z-index: 9999;
+    }
+
+    .btn {
+        width: 70px;
+        height: 70px;
+
+        background: rgba(0,0,0,0.8);
+        color: white;
+
+        font-size: 30px;
+        font-weight: bold;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        border-radius: 12px;
+        user-select: none;
+
+        box-shadow: 0 0 12px rgba(0,255,255,0.4);
+        transition: 0.1s;
+        touch-action: manipulation;
+    }
+
+    .btn:active {
+        transform: scale(0.85);
+        background: yellow;
+        color: black;
+    }
+}
