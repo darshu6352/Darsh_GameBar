@@ -74,4 +74,56 @@ body::before {
     border: 1px solid rgba(255,255,255,0.1);
     color: white;
 }   
+/* ===== GAME BOX (OPTIONAL) ===== */
+#gameBox {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,255,255,0.3);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: white;
+}   
 
+.joyst {
+    position: fixed;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: grid;
+    grid-template-columns: 60px 60px 60px;
+    grid-template-rows: 60px 60px;
+    gap: 10px;
+    z-index: 1000;
+}
+
+/* button style */
+.btn {
+    background: rgba(0,0,0,0.8);
+    color: white;
+    font-size: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    user-select: none;
+    touch-action: manipulation;
+}
+
+/* click animation */
+.btn:active {
+    transform: scale(0.85);
+    background: yellow;
+    color: black;
+}
+
+/* Tablet adjustment */
+/* DEFAULT: hide on desktop */
+.joyst {
+    display: none;
+}
+
+/* SHOW on tablet + mobile */
+@media (max-width: 1024px) {
+    .joyst {
+        display: grid;
+    }
+}
