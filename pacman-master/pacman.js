@@ -349,3 +349,31 @@ class Block {
         this.y = this.startY;
     }
 };
+document.addEventListener("DOMContentLoaded", () => {
+
+    const up = document.getElementById("up");
+    const down = document.getElementById("down");
+    const left = document.getElementById("left");
+    const right = document.getElementById("right");
+
+    function setDir(dir) {
+        if (!pacman) return;
+
+        if (dir === "U") pacman.updateDirection("U");
+        if (dir === "D") pacman.updateDirection("D");
+        if (dir === "L") pacman.updateDirection("L");
+        if (dir === "R") pacman.updateDirection("R");
+    }
+
+    // click + touch support
+    up.addEventListener("click", () => setDir("U"));
+    down.addEventListener("click", () => setDir("D"));
+    left.addEventListener("click", () => setDir("L"));
+    right.addEventListener("click", () => setDir("R"));
+
+    up.addEventListener("touchstart", () => setDir("U"));
+    down.addEventListener("touchstart", () => setDir("D"));
+    left.addEventListener("touchstart", () => setDir("L"));
+    right.addEventListener("touchstart", () => setDir("R"));
+
+});
